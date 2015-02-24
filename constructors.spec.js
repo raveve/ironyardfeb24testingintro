@@ -49,6 +49,28 @@ function expect(expectation) {
 
 // Write Constructors HERE
 
+var Human = function () {
+  this.name = "",
+  this.mood = "happy",
+  this.isCool = true
+
+  this.pet = function (pet) {
+    pet.mood = "happy"
+  }
+  this.feed = function (pet) {
+    pet.isHungry = false
+  }
+};
+
+var Pet = function () {
+  this.name = "",
+  this.color = "golden",
+  this.isHungry = true,
+  this.mood = ""
+};
+
+var calvin = new Human ({name: "calvin", isCool: "false"})
+
 /* instances defined for unwritten constructors
 ** DO NOT EDIT ANY LINE BELOW
 **
