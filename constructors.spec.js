@@ -69,7 +69,7 @@ var Pet = function () {
   this.mood = ""
 };
 
-var calvin = new Human ({name: "calvin", isCool: "false"})
+// One of the tests is failing, however, checked with Calvin and it sounds like it is his code vs my constructors.
 
 /* instances defined for unwritten constructors
 ** DO NOT EDIT ANY LINE BELOW
