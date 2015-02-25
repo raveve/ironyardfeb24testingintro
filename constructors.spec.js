@@ -49,10 +49,11 @@ function expect(expectation) {
 
 // Write Constructors HERE
 
-var Human = function () {
+var Human = function (spec) {
+  var options = spec || {};
   this.name = "",
   this.mood = "happy",
-  this.isCool = true
+  this.isCool = String(options.isCool) === "true" || (options.isCool === undefined) ? true : false
 
   this.pet = function (pet) {
     pet.mood = "happy"
@@ -62,14 +63,13 @@ var Human = function () {
   }
 };
 
-var Pet = function () {
+var Pet = function (spec) {
+  var options = spec || {};
   this.name = "",
   this.color = "golden",
   this.isHungry = true,
   this.mood = ""
 };
-
-// One of the tests is failing, however, checked with Calvin and it sounds like it is his code vs my constructors.
 
 /* instances defined for unwritten constructors
 ** DO NOT EDIT ANY LINE BELOW
